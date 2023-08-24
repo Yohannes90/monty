@@ -8,14 +8,14 @@
 void _div(stack_t **stack, unsigned int line_number)
 {
 	int div = 0;
-stack_t *tmp;
+	stack_t *tmp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
 		free(var_global.buffer);
 		fclose(var_global.file);
-		while (stack != NULL)
+		while (*stack)
 		{
 			tmp = (*stack)->next;
 			free(*stack);
@@ -28,7 +28,7 @@ stack_t *tmp;
 		fprintf(stderr, "L%d: division by zero\n", line_number);
 		free(var_global.buffer);
 		fclose(var_global.file);
-		while (*stack != NULL)
+		while (*stack)
 		{
 			tmp = (*stack)->next;
 			free(*stack);
