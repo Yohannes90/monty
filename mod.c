@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _mod - computes the reminder of the division of the second top 
+ * _mod - computes the reminder of the division of the second top
  * element by the top element of the stack
  * @stack: pointer to lists for monty stack
  * @line_number: number of line opcode occurs on
