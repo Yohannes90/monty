@@ -20,7 +20,6 @@ void read_file(char *filename, stack_t **stack)
 		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
 	}
-
 	while ((read = getline(&var_global.buffer, &i, var_global.file)) != -1)
 	{
 		line = parse_line(var_global.buffer, stack, line_count);
@@ -59,6 +58,7 @@ instruct_func get_op_func(char *str)
 		{"push", _push},
 		{"pall", _pall},
 		{"pint", _pint},
+		{"pop", _pop},
 		{NULL, NULL},
 	};
 
