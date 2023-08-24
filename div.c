@@ -1,14 +1,14 @@
 #include "monty.h"
 
 /**
- * _div - divides the second top element of the stack by the top element of the stack
+ * _div - divides the second top element by the top element of the stack
  * @stack: pointer to linked list stack
  * @line_number: number of line opcode occurs on
  */
 void _div(stack_t **stack, unsigned int line_number)
 {
 	int div = 0;
-    stack_t *tmp;
+stack_t *tmp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
